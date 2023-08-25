@@ -113,6 +113,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 }
 .nav{
   height: calc(var(--header-height) + 1rem);
@@ -127,10 +128,17 @@ img {
 }
 .nav__link{
   color:var(--title-color);
-  transition: all 0.3s var(--transistion);
+  transition: all 0.3s var(--transition);
+}
+.nav__close,
+.nav__toggle{
+  display: none;
 }
 
 /* Scroll header */
+.scroll-header{
+  background-color: var(--black);
+}
 
 /* Active link */
 .nav__link :hover, 
@@ -357,7 +365,16 @@ img {
 }
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
+  .container{
+    max-width: 1140px;
+  }
+  .home__container{
+    grid-template-columns: 5fr 7fr;
+  }
+  .footer__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -365,13 +382,95 @@ img {
 
 /* For medium devices */
 @media screen and (max-width: 992px) {
+  .container{
+    max-width: 960px;
+  }
+  .home__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
 }
 
 @media screen and (max-width: 768px) {
+  .home__container,
+  .subscription__container{
+    grid-template-columns: 1fr;
+  }
+
+  .home__content{
+    order: 1;
+  }
+
+  .item__title,
+  .tweet__title{
+    font-size: var(--small-font-size) ;
+ 
+  }
+
+  .nav__close,
+  .nav__toggle{
+  display: block;
+  font-size: var(--h2-font-size);
+  }
+
+  .nav__list{
+    flex-direction: column;
+    row-gap: 0.75rem ;
+  }
+
+  .nav__menu{
+    position: fixed;
+    top:0;
+    right: -100%;
+    background: var(--title-color);
+    width: 400px;
+    height: 100%;
+    padding: 4rem 1rem;
+
+  }
+
+  .nav__link,
+  .nav__close{
+    color: var(--black);
+
+  }
+
+  .nav__toggle{
+    color:var(--title-color);
+  }
+  
+  .nav__close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .nav__link{
+    padding: 0.7rem;
+  }
+
+  .active-link{
+    background: var(--first-color);
+    color: var(--title-color);
+    display: block;
+  }
 }
 
 /* For small devices */
 @media screen and (max-width: 576px) {
+  .section{
+    padding-block: 4rem;
+  }
+
+  .item__title,
+  .tweet__title{
+    font-size: var(--smaller-font-size) ;
+
+  }
+
+  .footer__container{
+    grid-template-columns:  1fr;
+  }
 }
 
 @media screen and (max-width: 450px) {
