@@ -426,8 +426,13 @@ img {
     width: 400px;
     height: 100%;
     padding: 4rem 1rem;
+    transition: all 0.3s var(--transition);
 
   }
+  .show-menu{
+    right: 0;
+  }
+  
 
   .nav__link,
   .nav__close{
@@ -467,6 +472,9 @@ img {
     font-size: var(--smaller-font-size) ;
 
   }
+  .nav__menu{
+    width:100%;
+  }
 
   .footer__container{
     grid-template-columns:  1fr;
@@ -474,4 +482,15 @@ img {
 }
 
 @media screen and (max-width: 450px) {
+  .brand__logo{
+    width: 55%;
+  }
+
+  .footer__anime-item img{
+    width: 85%;
+  }
+
+  .footer__instagram{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
