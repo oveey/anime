@@ -49,8 +49,37 @@
 
     .plans-section {
         flex-wrap: wrap;
+        flex-direction: column;
     }
   
 }
+@media screen and (max-width: 768px) {
+    .plans-section {
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+   
+}
+  
+/* For small devices */
+@media screen and (max-width: 576px) {
+    .plans-section {
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+  
+}
+  
+@media screen and (max-width: 450px) {
+    .plans-section {
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+  
+}
+  
   
   
