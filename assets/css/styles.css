@@ -61,6 +61,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+  overflow-x: hidden;
 }
 
 h1,
@@ -91,7 +92,7 @@ img {
 .container{
   max-width:1400px;
   margin-inline: auto;
-  padding-inline: 3rem;
+  padding-inline: 2rem;
 }
 .grid{
 
@@ -155,7 +156,7 @@ img {
   padding-block: 6rem 2rem;
 }
 .home__container{
-  grid-template-columns: 4fr 8fr;
+  grid-template-columns: 4fr 6fr;
   align-items: center;
 }
 .home__title{
@@ -178,13 +179,14 @@ img {
 
 }
 /*=============== BRAND ===============*/
-.brand__item{
+.brand__item {
   background-color:var(--container-color) ;
   height:100px;
   border-radius: .5rem;
   display: grid;
   place-items: center;
 }
+
 .brand__logo {
   width: 88%;
 }

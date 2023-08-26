@@ -65,28 +65,70 @@ var brandSwiper = new Swiper('.brand-swiper', {
 });
 
 /*=============== ANIME SWIPER ===============*/
+var animeSwiper = new Swiper('.anime-swiper1', {
+    spaceBetween: 24,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    speed: 500,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+      1400: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+      },
+    },
+});
+
 var animeSwiper = new Swiper('.anime-swiper', {
     spaceBetween: 24,
     loop: true,
+    autoplay: {
+      delay: 1000,
+    },
+    speed: 800,
     breakpoints: {
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 24,
-        },  
-        992: {
-            slidesPerView: 3,
-            spaceBetween: 24,
-        },
-
-        1200: {
-            slidesPerView: 4,
-            spaceBetween: 24,
-        },
-
-        1400: {
-            slidesPerView: 5,
-            spaceBetween: 24,
-        },
-        
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+      1400: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+      },
     },
 });
+
+
+
+
+
+
+
+  
+  
+
+AOS.init({
+    duration: 2000, // Set your desired duration here
+});
+  

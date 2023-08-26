@@ -15,6 +15,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <!--=============== AOS ===============-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -31,7 +35,7 @@
         <div class="nav__menu show-menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link active-link">Home</a>
+              <a href="index.html" class="nav__link active-link">Home</a>
             </li>
 
             <li class="nav__item">
@@ -43,7 +47,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="#" class="nav__link">Plans</a>
+              <a href="plans.html" class="nav__link">Plans</a>
             </li>
           </ul>
           <div class="nav__close" id="nav-close">
@@ -63,38 +67,36 @@
       <!--==================== HOME ====================-->
       <section class="home">
         <div class="home__container container grid">
-          <div class="home__content">
-            <h1 class="home__title">BEST ANIMA & MANGA STREAMING PLATFORM</h1>
-            <p class="home__description">Lorem ipsin dolor emeka oel Lorem ioel Lorem ipsin dolor emeka oel Lorem ipsin dolor emeka oel
-              Lorem ipsin dolor emeka oelLorem ipsin dolor emeka oel
-            </p>
+          <div class="home__content" data-aos="fade-right">
+            <h1 class="home__title" >BEST ANIME & MANGA STREAMING PLATFORM</h1>
+            <p class="home__description">Welcome to the ultimate destination for anime and manga enthusiasts. Discover the finest collection of anime and manga streaming platforms curated to bring you the best in Japanese animation and storytelling. </p>
             <a href="#" class="btn"> Start Free Trial</a>
           </div>
-          <img src="assets/img/home.png" alt="" class="home__png">
+          <img src="assets/img/home.png" alt="" class="home__png" data-aos="fade-left">
         </div>
       </section>
 
       <!--==================== BRAND ====================-->
       <section class="brand">
-        <div class="swiper brand-swiper container">
+        <div class="swiper brand-swiper container" data-aos="fade-up">
           <div class="swiper-wrapper">
             <div class="brand__item swiper-slide">
               <img src="assets/img/logo-1.png" alt="" class="brand__logo">
             </div>
   
-            <div class="brand__item swiper-wrapper">
+            <div class="brand__item swiper-slide">
               <img src="assets/img/logo-2.png" alt="" class="brand__logo">
             </div>
-            <div class="brand__item swiper-wrapper">
+            <div class="brand__item swiper-slide">
               <img src="assets/img/logo-3.png" alt="" class="brand__logo">
             </div>
-            <div class="brand__item swiper-wrapper">
+            <div class="brand__item swiper-slide">
               <img src="assets/img/logo-4.png" alt="" class="brand__logo">
             </div>
-            <div class="brand__item swiper-wrapper">
+            <div class="brand__item swiper-slide">
               <img src="assets/img/logo-5.png" alt="" class="brand__logo">
             </div>
-            <div class="brand__item swiper-wrapper">
+            <div class="brand__item swiper-slide">
               <img src="assets/img/logo-6.webp" alt="" class="brand__logo">
             </div>
             
@@ -103,17 +105,18 @@
 
         </div>
       </section>
+      
 
       <!--==================== SPECIAL ANIME ====================-->
       <section class="special__anime container section">
-        <h2 class="section__title"> Special For You</h2>
-        <div class="swiper anime-swiper">
+        <h2 class="section__title" data-aos="fade-up" > Special For You</h2>
+        <div class="swiper anime-swiper" data-aos="fade-up">
           <div class="swiper-wrapper">
             <div class="anime__item swiper-slide">
-              <img src="assets/img/anime-1.jpg" alt="" class="anime__img">
+              <img src="assets/img/anime-1.jpg" alt="" class="anime__img" >
               <div class="anime__data">
                 <h3 class="anime__title">Pop Manga Mermaids</h3>
-                <span class="anime__details">2019, Adventure</span>
+                <span class="anime__details">2019, Mystery</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -124,7 +127,7 @@
               </div>
             </div>
 
-            <div class="anime__item swiper-slide">
+            <div class="anime__item swiper-slide" data-aos="fade-up">
               <img src="assets/img/anime-2.png" alt="" class="anime__img">
               <div class="anime__data">
                 <h3 class="anime__title">Anime Mistery</h3>
@@ -142,8 +145,8 @@
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-3.jpg" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Pop Manga Mermaids</h3>
-                <span class="anime__details">2022, Adventure</span>
+                <h3 class="anime__title">My Hero Academia</h3>
+                <span class="anime__details">2022, Drama</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-regular fa-star"></i>
@@ -157,7 +160,7 @@
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-4.png" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Pop Manga Mermaids</h3>
+                <h3 class="anime__title">Dragon Ball Z</h3>
                 <span class="anime__details">2023, Adventure</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
@@ -172,8 +175,8 @@
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-5.jpg" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Pop Manga Mermaids</h3>
-                <span class="anime__details">2023, Adventure</span>
+                <h3 class="anime__title">Hunter x Hunter</h3>
+                <span class="anime__details">2022, Adventure</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -187,8 +190,8 @@
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-6.jpeg" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Pop Manga Mermaids</h3>
-                <span class="anime__details">2023, Adventure</span>
+                <h3 class="anime__title">Tokyo Ghoul</h3>
+                <span class="anime__details">2023, Horror</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -208,7 +211,7 @@
 
       <!--==================== SUBSCRIPTION ====================-->
       <section class="subscription">
-        <div class="subscription__container container grid">
+        <div class="subscription__container container grid" data-aos="fade-up">
           <img src="assets/img/subscription.png" alt="" class="subscription__img">
 
           <div class="subscription__content">
@@ -228,13 +231,13 @@
 
       <!--==================== POPULAR ANIME ====================-->
       <section class="popular__anime container section">
-        <h2 class="section__title"> Most popular</h2>
-        <div class="swiper anime-swiper">
-          <div class="swiper-wrapper">
+        <h2 class="section__title" data-aos="fade-up"> Most popular</h2>
+        <div class="swiper anime-swiper1" >
+          <div class="swiper-wrapper" data-aos="fade-up">
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-7.jpg" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Pop Manga Mermaids</h3>
+                <h3 class="anime__title">Tokyo Ghoul</h3>
                 <span class="anime__details">2019, Adventure</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
@@ -249,8 +252,8 @@
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-8.png" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Anime Mistery</h3>
-                <span class="anime__details">2021, Adventure</span>
+                <h3 class="anime__title">My Hero Academia</h3>
+                <span class="anime__details">2021, Mistery<span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -264,14 +267,14 @@
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-9.jpeg" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Pop Manga Mermaids</h3>
-                <span class="anime__details">2022, Adventure</span>
+                <h3 class="anime__title">Attack on Titan:</h3>
+                <span class="anime__details">2023, Horror</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
                 </p>
               </div>
             </div>
@@ -279,7 +282,7 @@
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-10.jpeg" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Pop Manga Mermaids</h3>
+                <h3 class="anime__title">Hunter x Hunter:</h3>
                 <span class="anime__details">2023, Adventure</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
@@ -292,7 +295,7 @@
             </div>
 
             <div class="anime__item swiper-slide">
-              <img src="assets/img/anime-11.jpeg" alt="" class="anime__img">
+              <img src="assets/img/anime-1.jpg" alt="" class="anime__img">
               <div class="anime__data">
                 <h3 class="anime__title">Pop Manga Mermaids</h3>
                 <span class="anime__details">2023, Adventure</span>
@@ -309,8 +312,8 @@
             <div class="anime__item swiper-slide">
               <img src="assets/img/anime-12.jpg" alt="" class="anime__img">
               <div class="anime__data">
-                <h3 class="anime__title">Pop Manga Mermaids</h3>
-                <span class="anime__details">2023, Adventure</span>
+                <h3 class="anime__title">Higurashi When They Cryn</h3>
+                <span class="anime__details">2023, Horror</span>
                 <p class="anime__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -330,8 +333,8 @@
       <!--==================== TRENDING ANIME ====================-->
       <section class="trending__anime section">
         <div class="anime-wrapper container">
-          <h2 class="section__title"> Trending Now</h2>
-          <div class="swiper anime-swiper">
+          <h2 class="section__title" data-aos="fade-up"> Trending Now</h2>
+          <div class="swiper anime-swiper" data-aos="fade-up">
             <div class="swiper-wrapper">
               <div class="anime__item swiper-slide">
                 <img src="assets/img/anime-6.jpeg" alt="" class="anime__img">
@@ -352,7 +355,7 @@
                 <img src="assets/img/anime-13.jpg" alt="" class="anime__img">
                 <div class="anime__data">
                   <h3 class="anime__title">Anime Mistery</h3>
-                  <span class="anime__details">2021, Adventure</span>
+                  <span class="anime__details">2021, Psychological</span>
                   <p class="anime__rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -366,7 +369,7 @@
               <div class="anime__item swiper-slide">
                 <img src="assets/img/anime-12.jpg" alt="" class="anime__img">
                 <div class="anime__data">
-                  <h3 class="anime__title">Pop Manga Mermaids</h3>
+                  <h3 class="anime__title">Higurashi When They Cry</h3>
                   <span class="anime__details">2022, Adventure</span>
                   <p class="anime__rating">
                     <i class="fa-solid fa-star"></i>
@@ -382,7 +385,7 @@
                 <img src="assets/img/anime-4.png" alt="" class="anime__img">
                 <div class="anime__data">
                   <h3 class="anime__title">Pop Manga Mermaids</h3>
-                  <span class="anime__details">2023, Adventure</span>
+                  <span class="anime__details">2023, Super powers</span>
                   <p class="anime__rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -394,7 +397,7 @@
               </div>
   
               <div class="anime__item swiper-slide">
-                <img src="assets/img/anime-6.jpg" alt="" class="anime__img">
+                <img src="assets/img/anime-11.jpeg" alt="" class="anime__img">
                 <div class="anime__data">
                   <h3 class="anime__title">Pop Manga Mermaids</h3>
                   <span class="anime__details">2023, Adventure</span>
@@ -409,10 +412,10 @@
               </div>
   
               <div class="anime__item swiper-slide">
-                <img src="assets/img/anime-8.jpeg" alt="" class="anime__img">
+                <img src="assets/img/anime-10.jpeg" alt="" class="anime__img">
                 <div class="anime__data">
-                  <h3 class="anime__title">Pop Manga Mermaids</h3>
-                  <span class="anime__details">2023, Adventure</span>
+                  <h3 class="anime__title">My Hero Academia</h3>
+                  <span class="anime__details">2023, Horror</span>
                   <p class="anime__rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -433,13 +436,13 @@
     <!--==================== FOOTER ====================-->
     <footer class="footer">
       <div class="footer__container container grid">
-        <div class="footer__content">
-          <h3 class="footer__title">Popular Anime</h3>
+        <div class="footer__content" data-aos="fade-up">
+          <h3 class="footer__title" data-aos="fade-up">Popular Anime</h3>
           <div class="footer__anime">
             <div class="footer__anime-item">
               <img src="assets/img/anime-9.jpeg" alt="" >
               <div class="item__data">
-                <h4 class="item__title"> lorem ipsum is really a dummy</h4>
+                <h4 class="item__title"> Dragon Ballz</h4>
                 <span class="item__details"> 2020. Action</span>
                 <p class="item__rating">
                   <i class="fa-solid fa-star"></i>
@@ -459,8 +462,8 @@
             <div class="footer__anime-item">
               <img src="assets/img/anime-4.png" alt="" >
               <div class="item__data">
-                <h4 class="item__title"> lorem ipsum is really a dummy</h4>
-                <span class="item__details"> 2020. Action</span>
+                <h4 class="item__title"> Pop Manga Mermaids</h4>
+                <span class="item__details"> 2023. Action</span>
                 <p class="item__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -478,8 +481,8 @@
           <div class="footer__anime-item">
             <img src="assets/img/anime-8.png" alt="" >
             <div class="item__data">
-              <h4 class="item__title"> lorem ipsum is really a dummy</h4>
-              <span class="item__details"> 2020. Action</span>
+              <h4 class="item__title"> My Hero Academia</h4>
+              <span class="item__details"> 2023. Action</span>
               <p class="item__rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -494,14 +497,22 @@
           </div>
         </div>
 
-        <div class="footer__content">
-          <h3 class="footer__title">Latest Tweet</h3>
-          <div class="footer__tweet">
+        <div class="footer__content"  >
+          <h3 class="footer__title" data-aos="fade-up">Latest Tweet</h3>
+          <div class="footer__tweet" data-aos="fade-up">
             <div class="tweet__item">
               <i class="fa-brands fa-square-twitter tweet__icon"></i>
               <div class="tweet__data">
                 <h4 class="tweet__title">lorem ipsm is high</h4>
-                <span class="tweet__details">Action, 2020</span>
+                <span class="tweet__details">Action, 2022</span>
+              </div>
+            </div>
+
+            <div class="tweet__item" >
+              <i class="fa-brands fa-square-twitter tweet__icon"></i>
+              <div class="tweet__data">
+                <h4 class="tweet__title">lorem ipsm is high</h4>
+                <span class="tweet__details">Action, 2023</span>
               </div>
             </div>
 
@@ -509,51 +520,48 @@
               <i class="fa-brands fa-square-twitter tweet__icon"></i>
               <div class="tweet__data">
                 <h4 class="tweet__title">lorem ipsm is high</h4>
-                <span class="tweet__details">Action, 2020</span>
-              </div>
-            </div>
-
-            <div class="tweet__item">
-              <i class="fa-brands fa-square-twitter tweet__icon"></i>
-              <div class="tweet__data">
-                <h4 class="tweet__title">lorem ipsm is high</h4>
-                <span class="tweet__details">Action, 2020</span>
+                <span class="tweet__details">Action, 2023</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="footer__content">
+        <div class="footer__content" data-aos="fade-up" >
           <h3 class="footer__title">Instagram feed</h3>
           <div class="footer__instagram grid">
-            <img src="assets/img/anime-8.png" alt="" class="feed__img" />
+            <img src="assets/img/anime-8.png" data-aos="fade-up" alt="" class="feed__img" />
             <img src="assets/img/anime-6.jpeg" alt="" class="feed__img" />
-            <img src="assets/img/anime-7.jpg" alt="" class="feed__img" />
-            <img src="assets/img/anime-12.jpg" alt="" class="feed__img" />
-            <img src="assets/img/anime-3.jpg" alt="" class="feed__img" />
+            <img src="assets/img/anime-7.jpg" data-aos="fade-up" alt="" class="feed__img" />
+            <img src="assets/img/anime-12.jpg" data-aos="fade-right" alt="" class="feed__img" />
+            <img src="assets/img/anime-3.jpg" data-aos="fade-left" alt="" class="feed__img" />
             <img src="assets/img/anime-10.jpeg" alt="" class="feed__img" />
             <img src="assets/img/anime-4.png" alt="" class="feed__img" />
-            <img src="assets/img/anime-9.jpeg" alt="" class="feed__img" />
+            <img src="assets/img/anime-9.jpeg"data-aos="fade-up" alt="" class="feed__img" />
 
           </div>
         </div>
 
-        <div class="footer__content">
-          <h3 class="footer__title">Instagram feed</h3>
+        <div class="footer__content" data-aos="fade-left">
+          <h3 class="footer__title">Banner</h3>
           <img src="assets/img/banner.png" alt="" class="banner__img" />
 
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright">Copyright &copy; Anima 2023</p>
+        <p class="footer__copyright">Copyright &copy; Anime 2023</p>
       </div>
     </footer>
 
     <!--=============== SWIPER JS ===============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+    <!--=============== AOS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
   </body>
 </html>

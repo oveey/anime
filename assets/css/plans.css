@@ -1,0 +1,46 @@
+.plans-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin: 200px auto;
+}
+.plan {
+    border: 2px solid #ddd;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+}
+  
+.plan h2 {
+    margin-bottom: 10px;
+}
+  
+.price {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+  
+.features {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+  
+.features li {
+    margin-bottom: 5px;
+}
+  
+.subscribe-button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: .25rem;
+    font-weight: 500;
+    margin-top: 1.3rem;
+  
+}
+  
