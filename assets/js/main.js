@@ -150,35 +150,41 @@ document.querySelectorAll('.nav__link').forEach(link => {
   });
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Check if the current page is the home page
-  if (window.location.pathname === '/index.html') {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav__link');
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav__link');
+  const subscribeLink = document.querySelector('.nav__link[href="#Subscribe"]');
+  const subscribeSection = document.getElementById('subscribe');
 
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY;
+  subscribeLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    const scrollToOptions = {
+      top: subscribeSection.offsetTop,
+      behavior: 'smooth'
+    };
+    window.scrollTo(scrollToOptions);
+  });
 
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          const targetLinkId = `#${section.id}`;
-          const activeLink = document.querySelector(`.nav__link[href="${targetLinkId}"]`);
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
 
-          if (activeLink) {
-            navLinks.forEach(link => link.classList.remove('active-link'));
-            activeLink.classList.add('active-link');
-          }
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        const targetLinkId = `#${section.id}`;
+        const activeLink = document.querySelector(`.nav__link[href="${targetLinkId}"]`);
+
+        if (activeLink) {
+          navLinks.forEach(link => link.classList.remove('active-link'));
+          activeLink.classList.add('active-link');
         }
-      });
+      }
     });
-  }
-
-  
+  });
 });
+
 
 
 const card = document.querySelector('.plan');

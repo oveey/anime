@@ -8,17 +8,34 @@
 
 .plan {
     position: relative;
-    border: 2px solid transparent; /* Start with a transparent border */
-    border-image: linear-gradient(45deg, rgb(191, 0, 255), rgb(205, 207, 204));
+    border: 5px solid transparent; /* Start with a transparent border */
+    border-image: linear-gradient(45deg, rgb(191, 0, 255), rgb(222, 122, 16), rgb(205, 207, 204));
     border-image-slice: 1; /* Slice the border image into 9 equal parts */
     padding: 50px;
     border-radius: 10px;
     text-align: center;
-    max-width: 300px;
+    max-width: 400px;
     --left: 10px;
     --top: 50px;
     /* Replace the colors with your desired gradient colors */
+    animation: borderAnimation 2s infinite alternate;
+
 }
+@keyframes borderAnimation {
+    0% {
+        border-image-source: linear-gradient(45deg, rgb(191, 0, 255), rgb(222, 122, 16), rgb(205, 207, 204));
+        border-image-slice: 1;
+        transform: translateY(-20%);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, rgb(205, 207, 204), rgb(191, 0, 255), rgb(222, 122, 16));
+        border-image-slice: 1;
+        transform: translateY(0);
+        transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+
 .plan::before{
     content: '';
     background: #b061ed;
@@ -69,10 +86,7 @@ li{
   
 .plan h2 {
     margin-bottom: 10px;
-    display: flex;
-    justify-content: flex-start;
-    flex: left;
-
+    
 }
   
 .price {
@@ -82,7 +96,6 @@ li{
   
 .features  {
     list-style-type: none;
-    padding: 0;
     margin-bottom: 20px;
     margin-bottom: 10px;
 }
@@ -97,7 +110,7 @@ li{
   
 .subscribe-button {
     display: inline-block;
-    background-color: var(--first-color);
+    background:  linear-gradient(45deg, rgb(191, 0, 255),rgb(205, 207, 204), rgb(222, 122, 16) );
     color: var(--title-color);
     border: none;
     padding: 1rem 1.5rem;
@@ -108,11 +121,7 @@ li{
     width: 200px;
   
 }
-.subscribe-button {
-    background-color: var(--first-color);
-    /* other button styles */
-    order: 3; /* Set order to 3 */
-}
+
 
 
 
