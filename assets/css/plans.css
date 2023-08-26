@@ -1,20 +1,78 @@
 .plans-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     margin: 200px auto;
 }
+
 .plan {
-    border: 2px solid #ddd;
+    position: relative;
+    border: 2px solid transparent; /* Start with a transparent border */
+    border-image: linear-gradient(45deg, rgb(191, 0, 255), rgb(205, 207, 204));
+    border-image-slice: 1; /* Slice the border image into 9 equal parts */
     padding: 50px;
     border-radius: 10px;
     text-align: center;
     max-width: 300px;
+    --left: 10px;
+    --top: 50px;
+    /* Replace the colors with your desired gradient colors */
 }
+.plan::before{
+    content: '';
+    background: #b061ed;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    left: var(--left);
+    top: var(--top);
+    transform: translateY(-50%, -50%) scale (1.5);
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.3s;
+    filter: blur(50px);
+
+}
+.circle {
+    content: '';
+    background: #581c87;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    left: var(--left, 10px);
+    top: var(--top, 50px);
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.3s;
+    filter: blur(50px);
+}
+  
+  
+  
+  
+li{
+    display: flex;
+    text-align: start;
+    justify-content: justify;
+}
+  
+  
+.plan:hover::before{
+    opacity: 1;
+}
+
+
   
 .plan h2 {
     margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex: left;
+
 }
   
 .price {
@@ -22,11 +80,16 @@
     margin: 10px 0;
 }
   
-.features {
+.features  {
     list-style-type: none;
     padding: 0;
     margin-bottom: 20px;
+    margin-bottom: 10px;
 }
+.checkmark{
+    width: 10%;
+}
+
   
 .features li {
     margin-bottom: 5px;
@@ -38,12 +101,22 @@
     color: var(--title-color);
     border: none;
     padding: 1rem 1.5rem;
-    border-radius: .25rem;
+    border-radius: .15rem;
     font-weight: 500;
     margin-top: 1.3rem;
     cursor: pointer;
+    width: 200px;
   
 }
+.subscribe-button {
+    background-color: var(--first-color);
+    /* other button styles */
+    order: 3; /* Set order to 3 */
+}
+
+
+
+
 
 @media screen and (max-width: 768px) {
 
@@ -53,14 +126,7 @@
     }
   
 }
-@media screen and (max-width: 768px) {
-    .plans-section {
-        flex-wrap: wrap;
-        flex-direction: column;
 
-    }
-   
-}
   
 /* For small devices */
 @media screen and (max-width: 576px) {

@@ -150,6 +150,7 @@ document.querySelectorAll('.nav__link').forEach(link => {
   });
 });
 
+
 document.addEventListener('DOMContentLoaded', () => {
   // Check if the current page is the home page
   if (window.location.pathname === '/index.html') {
@@ -177,6 +178,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   
+});
+
+
+const card = document.querySelector('.plan');
+const circle = card.querySelector('.circle');
+
+let isDragging = false;
+
+circle.addEventListener('mousedown', (e) => {
+  isDragging = true;
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+
+  const cardRect = card.getBoundingClientRect();
+  const mouseX = e.clientX - cardRect.left;
+  const mouseY = e.clientY - cardRect.top;
+
+  circle.style.setProperty('--left', `${mouseX}px`);
+  circle.style.setProperty('--top', `${mouseY}px`);
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
 });
 
 
