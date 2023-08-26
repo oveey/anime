@@ -1,24 +1,32 @@
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
- navToggle= document.getElementById('nav-toggle'),
- navClose= document.getElementById('nav-close');
+document.addEventListener('DOMContentLoaded', () => {
+  const navMenu = document.getElementById('nav-menu');
+  const navToggle = document.getElementById('nav-toggle');
+  const navClose = document.getElementById('nav-close');
+  const navLinks = document.querySelectorAll('.nav__link'); // Assuming this is your navigation links
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if (navToggle) {
+  // Toggle the navigation menu
+  if (navToggle) {
     navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
+      navMenu.classList.toggle('show-menu');
     });
+  }
 
-}
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if (navClose) {
+  // Close the navigation menu
+  if (navClose) {
     navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
+      navMenu.classList.remove('show-menu');
     });
+  }
 
-}
+  // Close the navigation menu when a link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu');
+    });
+  });
+});
+
+
 
 
 /*=============== SCROLL HEADER ===============*/
@@ -120,6 +128,61 @@ var animeSwiper = new Swiper('.anime-swiper', {
 });
 
 
+// Smooth scrolling behavior for internal navigation links
+document.querySelectorAll('.nav__link').forEach(link => {
+  link.addEventListener('click', e => {
+    const targetId = link.getAttribute('href');
+
+    if (targetId.startsWith('#')) { // Check if the link is internal
+      e.preventDefault();
+
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if the current page is the home page
+  if (window.location.pathname === '/index.html') {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav__link');
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          const targetLinkId = `#${section.id}`;
+          const activeLink = document.querySelector(`.nav__link[href="${targetLinkId}"]`);
+
+          if (activeLink) {
+            navLinks.forEach(link => link.classList.remove('active-link'));
+            activeLink.classList.add('active-link');
+          }
+        }
+      });
+    });
+  }
+
+  
+});
+
+
+
+
+
 
 
 
@@ -129,6 +192,6 @@ var animeSwiper = new Swiper('.anime-swiper', {
   
 
 AOS.init({
-    duration: 2000, // Set your desired duration here
+    duration: 1000, // Set your desired duration here
 });
   
