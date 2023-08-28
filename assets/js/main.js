@@ -187,29 +187,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const card = document.querySelector('.plan');
-const circle = card.querySelector('.circle');
+// const plans = document.querySelector('.plan');
+// const circle = card.querySelector('.circle');
 
-let isDragging = false;
+// let isDragging = false;
 
-circle.addEventListener('mousedown', (e) => {
-  isDragging = true;
+// circle.addEventListener('mousedown', (e) => {
+//   isDragging = true;
+// });
+
+// document.addEventListener('mousemove', (e) => {
+//   if (!isDragging) return;
+
+//   const Rect = card.getBoundingClientRect();
+//   const mouseX = e.clientX - cardRect.left;
+//   const mouseY = e.clientY - cardRect.top;
+
+//   plan.style.setProperty('--left', `${mouseX}px`);
+//   plan.style.setProperty('--top', `${mouseY}px`);
+// });
+
+// document.addEventListener('mouseup', () => {
+//   isDragging = false;
+// });
+
+const plan = document.querySelector('.plan');
+
+plan.addEventListener('mousemove', (e) => {
+  const rect = plan.getBoundingClientRect();
+
+  const left = e.clientX - rect.left;
+  const top = e.clientY - rect.top;
+
+  plan.style.setProperty('--left', `${left}px`);
+  plan.style.setProperty('--top', `${top}px`);
 });
 
-document.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-
-  const cardRect = card.getBoundingClientRect();
-  const mouseX = e.clientX - cardRect.left;
-  const mouseY = e.clientY - cardRect.top;
-
-  circle.style.setProperty('--left', `${mouseX}px`);
-  circle.style.setProperty('--top', `${mouseY}px`);
-});
-
-document.addEventListener('mouseup', () => {
-  isDragging = false;
-});
 
 
 

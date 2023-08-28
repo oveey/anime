@@ -7,7 +7,6 @@
 }
 
 .plan {
-    position: relative;
     border: 5px solid transparent; /* Start with a transparent border */
     border-image: linear-gradient(45deg, rgb(191, 0, 255), rgb(222, 122, 16), rgb(205, 207, 204));
     border-image-slice: 1; /* Slice the border image into 9 equal parts */
@@ -19,18 +18,16 @@
     --top: 50px;
     /* Replace the colors with your desired gradient colors */
     animation: borderAnimation 2s infinite alternate;
+    position: relative; /* Ensure proper positioning of ::before element */
+
 
 }
 @keyframes borderAnimation {
     0% {
         border-image-source: linear-gradient(45deg, rgb(191, 0, 255), rgb(222, 122, 16), rgb(205, 207, 204));
-        border-image-slice: 1;
-        transform: translateY(-20%);
     }
     100% {
         border-image-source: linear-gradient(45deg, rgb(205, 207, 204), rgb(191, 0, 255), rgb(222, 122, 16));
-        border-image-slice: 1;
-        transform: translateY(0);
         transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 }
@@ -45,27 +42,17 @@
     position: absolute;
     left: var(--left);
     top: var(--top);
-    transform: translateY(-50%, -50%) scale (1.5);
+    transform: translateY(-50%,) scale (0.2);
     z-index: -10;
     opacity: 0;
     transition: opacity 0.3s;
     filter: blur(50px);
 
 }
-.circle {
-    content: '';
-    background: #581c87;
-    border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-    position: absolute;
-    left: var(--left, 10px);
-    top: var(--top, 50px);
-    transform: translate(-50%, -50%) scale(1.5);
-    z-index: -10;
-    opacity: 0;
-    transition: opacity 0.3s;
-    filter: blur(50px);
+
+/* Add hover styles */
+.plan:hover::before {
+    opacity: 1;
 }
   
   
@@ -78,9 +65,7 @@ li{
 }
   
   
-.plan:hover::before{
-    opacity: 1;
-}
+
 
 
   
@@ -99,6 +84,7 @@ li{
     margin-bottom: 20px;
     margin-bottom: 10px;
 }
+
 .checkmark{
     width: 10%;
 }
